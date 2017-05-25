@@ -46,7 +46,7 @@ class ViewController: UIViewController, NMPAnchorOverlayViewDelegate {
       // Additional Properties
       //
 
-      slideView.minHeight = 35.0
+      slideView.minHeight = 28.0
       slideView.backgroundColor = UIColor.green
       slideView.layer.cornerRadius = 12.0
       
