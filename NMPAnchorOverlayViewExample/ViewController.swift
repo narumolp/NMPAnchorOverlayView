@@ -47,10 +47,10 @@ class ViewController: UIViewController, NMPAnchorOverlayViewDelegate {
       
       // Set delegate and add view
       slideView.delegate = self
-      //self.view.addSubview(slideView)
+      self.view.addSubview(slideView)
       
       // Add additional view to AanchorOverlayView
-      //addStuffOnSlideView()
+      addStuffOnSlideView()
       
       // 2 Create from storyboard, then call this method to add IBOutlets contraints on an
       // NMPAnchorOverlayView instance

@@ -24,10 +24,10 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="r1W-wF-Y74" customClass="NMPAnchorOverlayView" customModule="NMPAnchorOverlayViewExample" customModuleProvider="target">
                                 <rect key="frame" x="20" y="417" width="335" height="230"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="mzF-yC-9YT">
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="mzF-yC-9YT">
                                         <rect key="frame" x="10" y="10" width="315" height="210"/>
                                         <subviews>
-                                            <stackView opaque="NO" contentMode="scaleAspectFit" verticalCompressionResistancePriority="250" distribution="fillEqually" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="b0A-W1-4ei">
+                                            <stackView opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="250" distribution="fillEqually" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="b0A-W1-4ei">
                                                 <rect key="frame" x="0.0" y="0.0" width="315" height="103"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IjD-2y-DGF" userLabel="b2">
@@ -91,6 +91,9 @@
                                                 </subviews>
                                             </stackView>
                                         </subviews>
+                                        <constraints>
+                                            <constraint firstItem="fUn-ls-BF6" firstAttribute="height" secondItem="b0A-W1-4ei" secondAttribute="height" id="EbI-a9-Tc0"/>
+                                        </constraints>
                                     </stackView>
                                 </subviews>
                                 <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
