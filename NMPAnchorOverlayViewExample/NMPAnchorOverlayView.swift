@@ -35,10 +35,10 @@
 import UIKit
 
 @objc protocol NMPAnchorOverlayViewDelegate {
-   @objc optional func NMPAnchorOverlayViewDidOpen(view: UIView)
-   @objc optional func NMPAnchorOverlayViewDidClose(view: UIView)
-   @objc optional func NMPAnchorOverlayViewWillOpen(view: UIView)
-   @objc optional func NMPAnchorOverlayViewWillClose(view: UIView)
+   @objc optional func NMPAnchorOverlayViewDidExpand(view: UIView)
+   @objc optional func NMPAnchorOverlayViewDidShrink(view: UIView)
+   @objc optional func NMPAnchorOverlayViewWillExpand(view: UIView)
+   @objc optional func NMPAnchorOverlayViewWillShrink(view: UIView)
 }
 
 class NMPAnchorOverlayView: UIView {
@@ -60,7 +60,7 @@ class NMPAnchorOverlayView: UIView {
    
    // The view is closed or opened
    enum ViewState {
-      case closed, opened
+      case shrink, expand
    }
    
    // MARK: - class variables
@@ -79,6 +79,25 @@ class NMPAnchorOverlayView: UIView {
    var maxHeight: CGFloat! = NMPAnchorOverlayViewOpenHeight
    var minHeight: CGFloat! = NMPAnchorOverlayViewCloseHeight
    
+   // MARK: -  Parameters for view animation when expand or shrink
+   // Refer to the developer api reference for more details
+   // https://developer.apple.com/reference/uikit/uiview/1622594-animatewithduration
+   
+   // Total duration, measured in seconds
+   var animDuration: TimeInterval = 0.4
+   // Amount of time to wait before the animation begins, default
+   // is 0.0 which begin immidiately, measured in seconds
+   var animDelay: TimeInterval = 0.0
+   // The damping ratio for spring animation default to 0.7
+   var animSpringDampingRatio: CGFloat = 0.6
+   // The initial spring velocity
+   var animInitialSpringVelocity: CGFloat = 20.0
+   
+   // The amount of relative verticle movement of view at the end
+   // of animation ranges 0.01 - 1.0
+   var animClearance: CGFloat = 0.7
+
+   
    // MARK: - Read only public Properties
    
    public private(set) weak var trailingConstraint: NSLayoutConstraint!
@@ -86,7 +105,7 @@ class NMPAnchorOverlayView: UIView {
    public private(set) weak var heightConstraint: NSLayoutConstraint!
    public private(set) weak var topConstraint: NSLayoutConstraint?
    public private(set) weak var bottomConstraint: NSLayoutConstraint?
-   public private(set) var viewState: ViewState = .closed
+   public private(set) var viewState: ViewState = .shrink
    public private(set) var yMargin: CGFloat! = 35.0
    
    // MARK: - Private Variables
@@ -253,7 +272,7 @@ class NMPAnchorOverlayView: UIView {
       }
       
       modifyHeightConstraints()
-      animateViewTransition(duration: 0.5, delay: 0.0, clearance: 0.7) {
+      animateViewTransition( duration: animDuration, delay: animDelay, clearance: animClearance, springDampingRatio: animSpringDampingRatio, initialSpringVelocity: animInitialSpringVelocity ) {
          self.slideDirection = .none
       }
    }
@@ -308,7 +327,7 @@ class NMPAnchorOverlayView: UIView {
    override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
       
       self.modifyHeightConstraints()
-      self.animateViewTransition(duration: 0.4, delay: 0.0, clearance: 2.1, complete: {
+      self.animateViewTransition(duration: animDuration, delay: animDelay, clearance: animClearance, springDampingRatio: animSpringDampingRatio, initialSpringVelocity: animInitialSpringVelocity, complete: {
          self.slideDirection = .none
       })
       super.touchesEnded(touches, with: event)
@@ -317,40 +336,39 @@ class NMPAnchorOverlayView: UIView {
    
    // MARK: - Private Functions
    
-   
    /// Animates the view movement to mimic the spring bouncing
    /// when open or close the view.
    /// - duration: animate duration in second
    /// - delay: delay in second before animation starts
-   /// - clearance: value 0 - 1, relative movements of the view when opened or closed.
+   /// - clearance: value 0 - 1, relative movements of the view when expand or shrink.
    /// - Returns: n/a
-   private func animateViewTransition(duration: TimeInterval, delay: TimeInterval, clearance: CGFloat, complete:@escaping ()->Void) {
+   private func animateViewTransition(duration: TimeInterval, delay: TimeInterval, clearance: CGFloat, springDampingRatio: CGFloat, initialSpringVelocity: CGFloat, complete:@escaping ()->Void) {
       var moveSpace = clearance >= 1.0 ? 1.0 : clearance
-      moveSpace = moveSpace < 0.05 ? 0.1 : moveSpace
+      moveSpace = moveSpace < 0.05 ? 0.05 : moveSpace
       moveSpace = moveSpace * 100
       
-      UIView.animate(withDuration: duration, delay: delay, usingSpringWithDamping: 8.0, initialSpringVelocity: 30.0, options: .curveEaseOut, animations: {
+      UIView.animate(withDuration: duration, delay: delay, usingSpringWithDamping: springDampingRatio, initialSpringVelocity: initialSpringVelocity, options: .curveEaseOut, animations: {
          
          switch self.anchorLocation {
          case .top :
             if self.slideDirection == .up {
                self.center.y += moveSpace
-               self.delegate?.NMPAnchorOverlayViewWillClose?(view: self)
+               self.delegate?.NMPAnchorOverlayViewWillShrink?(view: self)
             }
             else if self.slideDirection == .down {
                self.center.y -= moveSpace
-               self.delegate?.NMPAnchorOverlayViewWillOpen?(view: self)
+               self.delegate?.NMPAnchorOverlayViewWillExpand?(view: self)
             }
             self.layoutIfNeeded()
             
          case .bottom :
             if self.slideDirection == .down {
                self.center.y += moveSpace
-               self.delegate?.NMPAnchorOverlayViewWillClose?(view: self)
+               self.delegate?.NMPAnchorOverlayViewWillShrink?(view: self)
             }
             else if self.slideDirection == .up {
                self.center.y -= moveSpace
-               self.delegate?.NMPAnchorOverlayViewWillOpen?(view: self)
+               self.delegate?.NMPAnchorOverlayViewWillExpand?(view: self)
             }
             self.layoutIfNeeded()
          }
@@ -358,13 +376,13 @@ class NMPAnchorOverlayView: UIView {
          
          switch self.anchorLocation {
          case .top :
-            if self.slideDirection == .up { self.delegate?.NMPAnchorOverlayViewDidClose?(view: self) }
-            else if self.slideDirection == .down { self.delegate?.NMPAnchorOverlayViewDidOpen?(view: self) }
+            if self.slideDirection == .up { self.delegate?.NMPAnchorOverlayViewDidShrink?(view: self) }
+            else if self.slideDirection == .down { self.delegate?.NMPAnchorOverlayViewDidExpand?(view: self) }
             self.layoutIfNeeded()
             
          case .bottom :
-            if self.slideDirection == .down { self.delegate?.NMPAnchorOverlayViewDidClose?(view: self) }
-            else if self.slideDirection == .up { self.delegate?.NMPAnchorOverlayViewDidOpen?(view: self) }
+            if self.slideDirection == .down { self.delegate?.NMPAnchorOverlayViewDidShrink?(view: self) }
+            else if self.slideDirection == .up { self.delegate?.NMPAnchorOverlayViewDidExpand?(view: self) }
             self.layoutIfNeeded()
          }
          complete()
@@ -380,10 +398,10 @@ class NMPAnchorOverlayView: UIView {
          switch self.slideDirection {
          case .down:
             self.heightConstraint.constant = self.minHeight
-            viewState = .closed
+            viewState = .shrink
          case .up:
             self.heightConstraint.constant = self.maxHeight
-            viewState = .opened
+            viewState = .expand
          case .none:
             break
          }
@@ -391,10 +409,10 @@ class NMPAnchorOverlayView: UIView {
          switch self.slideDirection {
          case .up:
             self.heightConstraint.constant = self.minHeight
-            viewState = .closed
+            viewState = .shrink
          case .down:
             self.heightConstraint.constant = self.maxHeight
-            viewState = .opened
+            viewState = .expand
          case .none:
             break
          }

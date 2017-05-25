@@ -1,10 +1,16 @@
 //
 //  ViewController.swift
-//  AnchorSlideView
+//  NMPAnchorOverlayViewExample project
 //
 //  Created by Narumol Pugkhem on 5/8/17.
 //  Copyright © 2017 Narumol. All rights reserved.
 //
+// This is the main viewController of NMPAnchorOverlayViewExample app.
+// It's main purpose is to demonstrate usage of NMPAnchorOverlayView. 
+// It creates two NMPAnchorOverlayView instances as subviews; one is anchored
+// to the top and the other to the bottom.
+
+
 
 import UIKit
 
@@ -27,7 +33,7 @@ class ViewController: UIViewController, NMPAnchorOverlayViewDelegate {
    
    private var button: UIButton!
    
-   /// Add two AnchorOverlayView instances on ViewController's view
+   /// Add two NMPAnchorOverlayView instances on ViewController's view
    /// - Returns: n/a
    override func viewDidLoad() {
       super.viewDidLoad()
@@ -39,9 +45,8 @@ class ViewController: UIViewController, NMPAnchorOverlayViewDelegate {
       
       // Additional Properties
       //
-      
-      // slideView.maxHeight = 300
-      // slideView.minHeight = 30
+
+      slideView.minHeight = 35.0
       slideView.backgroundColor = UIColor.green
       slideView.layer.cornerRadius = 12.0
       
@@ -65,18 +70,20 @@ class ViewController: UIViewController, NMPAnchorOverlayViewDelegate {
       // Set additional properties
       stbView.maxHeight = 500
       stbView.minHeight = 25
+//      stbView.animSpringDampingRatio = 0.2
+//      stbView.animClearance = 0.7
       
       // Set delegate
       stbView.delegate = self
       
-      // Optionally hide the AnchorOverlayView instance's subviews
+      // Optionally hide the NMPAnchorOverlayView instance's subviews
       for v in stbView.subviews {
          v.isHidden = true
       }
    }
    
    
-   /// Add a purple view on AnchorOverlayView's instance
+   /// Add a purple view on NMPAnchorOverlayView's instance
    /// - Returns:
    func addStuffOnSlideView() {
       button = UIButton(frame: CGRect(x:0, y:0, width:150, height: (slideView.maxHeight)/3))
@@ -99,7 +106,8 @@ class ViewController: UIViewController, NMPAnchorOverlayViewDelegate {
       if !( stbView.frame.contains(point) || slideView.frame.contains(point)) {
          for v in view.subviews {
             if v is NMPAnchorOverlayView {
-               (v as! NMPAnchorOverlayView).closeView() }
+               (v as! NMPAnchorOverlayView).closeView()
+            }
          }
       }
    }
@@ -108,8 +116,8 @@ class ViewController: UIViewController, NMPAnchorOverlayViewDelegate {
    // MARK: -  AnchorOverlayView Delegate
    
    /// Hide the button after the slideView close
-   /// - Returns: imageView: UIImage
-   func NMPAnchorOverlayViewDidClose(view: UIView) {
+   /// - Returns: n/a
+   func NMPAnchorOverlayViewDidShrink(view: UIView) {
       
       if view === slideView {
          UIView.animate(withDuration: 0.5) {
@@ -117,12 +125,14 @@ class ViewController: UIViewController, NMPAnchorOverlayViewDelegate {
             self.button.isHidden = true
          }
       }
+      print("did shrink", stbView.viewState, slideView.viewState)
+
    }
    
    
    /// Hide subviews of stbView
    /// - Returns: n/a
-   func NMPAnchorOverlayViewWillClose(view: UIView) {
+   func NMPAnchorOverlayViewWillShrink(view: UIView) {
       
       if view === stbView {
          UIView.animate(withDuration: 0.3) {
@@ -131,12 +141,13 @@ class ViewController: UIViewController, NMPAnchorOverlayViewDelegate {
             }
          }
       }
+      print("will shrink", stbView.viewState, slideView.viewState)
    }
    
    
-   /// Add show the button and animate
+   /// Show the button and animate
    /// - Returns: n/a
-   func NMPAnchorOverlayViewDidOpen(view: UIView) {
+   func NMPAnchorOverlayViewDidExpand(view: UIView) {
       
       if view === slideView {
          button.center.x = slideView.bounds.width/2
@@ -147,12 +158,14 @@ class ViewController: UIViewController, NMPAnchorOverlayViewDelegate {
             self.button.isHidden = false
          }
       }
+      print("did ex", stbView.viewState, slideView.viewState)
+
    }
    
    
-   /// Create an image view with a dog image
+   /// Show stbView's subviews
    /// - Returns: n/a
-   func NMPAnchorOverlayViewWillOpen(view: UIView) {
+   func NMPAnchorOverlayViewWillExpand(view: UIView) {
       if view === stbView {
          UIView.animate(withDuration: 0.3) {
             for v in self.stbView.subviews {
@@ -160,6 +173,8 @@ class ViewController: UIViewController, NMPAnchorOverlayViewDelegate {
             }
          }
       }
+      print("will ex", stbView.viewState, slideView.viewState)
+
    }
    
 }
