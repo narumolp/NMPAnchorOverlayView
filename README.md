@@ -55,13 +55,12 @@ The API uses default parameters in init methods which allows more ways to initia
 2. Set custom class to NMPAnchorOverlayView, this can be done in Custom Class section in identity inspector panel. 
 3. Add the following constraints to your custom view: Height, Trailing Space, Leading Space, and either Top Space or Bottom Space constraint depending whether your custom view should be anchored to the top or bottom. 
 4. Connect all four constraints @IBOutlets to your parent ViewController in code. 
-(Refer to Example project).
+(see Example project).
 
-      1.   @IBOutlet weak var heightCt: NSLayoutConstraint!
-      2.   @IBOutlet weak var leftCt: NSLayoutConstraint!
-      3.   @IBOutlet weak var rightCt: NSLayoutConstraint!
-
-      4. @IBOutlet weak var bottomCt: NSLayoutConstraint! or @IBOutlet weak var topCt: NSLayoutConstraint! 
+- @IBOutlet weak var heightCt: NSLayoutConstraint!
+- @IBOutlet weak var leftCt: NSLayoutConstraint!
+- @IBOutlet weak var rightCt: NSLayoutConstraint!
+- @IBOutlet weak var bottomCt: NSLayoutConstraint! or @IBOutlet weak var topCt: NSLayoutConstraint! 
 
 ## Delegate methods
 To get notified of view’s state you can implement following optional four methods.
