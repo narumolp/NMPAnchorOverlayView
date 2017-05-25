@@ -29,28 +29,28 @@ To create NMPAnchorOverlayView programmatically from a parent viewController, us
       slideView.maxHeight = 300
       slideView.minHeight = 30
       slideView.backgroundColor = UIColor.green
-      slideView.layer.cornerRadius = 12.0
 
       // Set delegate and add view
       slideView.delegate = self
       self.view.addSubview(slideView)
 
-### Convenience init function:  
-convenience init(size: CGSize, anchorLocation: AnchorLocation = .top, yMargin: CGFloat, minimumHeight: CGFloat, maximumHeight: CGFloat)
-
 - size: the original size of an NMPAnchorOverlayView instance. The view will be created with the width from size.width and will appear with height of minHeight. 
 - minHeight: the size of view in shrink state
 - maxHeight: the size of view in expand state
 - anchorLocation: indicates whether the view will anchor it’s top or bottom to it’s superview. .top is the default location
-- yMargin: the space from the view’s top edge to that of it’s superview for top anchor location. Space from view’s bottom edge to that of it’s superview for bottom anchor location. 
+- yMargin: the space between the view’s top edge to that of it’s superview for top anchor location and between view’s bottom edge to that of it’s superview for bottom anchor location. 
 
-Using Default Parameter in init methods, a NMPAnchorOverlayView instance can be initiated by one or more parameters as follows
+### Convenience init function:  
+convenience init(size: CGSize, anchorLocation: AnchorLocation = .top, yMargin: CGFloat, minimumHeight: CGFloat, maximumHeight: CGFloat)
 
-let defaultTopAnchoredView = NMPAnchorOverlayView(size: size)
-let bottomAnchoredView = NMPAnchorOverlayView(size: size, anchorLocation: .bottom)
-let veryLargeTopAnchoredView  = NMPAnchorOverlayView(size: size, maximumHeight: 700)
+The API uses default parameters in init methods which allows more ways to initialize the class instance. Examples are as follows
+
+- let defaultTopAnchoredView = NMPAnchorOverlayView(size: size)
+- let bottomAnchoredView = NMPAnchorOverlayView(size: size, anchorLocation: .bottom)
+- let veryLargeTopAnchoredView  = NMPAnchorOverlayView(size: size, maximumHeight: 700)
 
 ## Initialized in Storyboard
+
 1. Add a UIView object in parent viewController's view
 2. Set custom class to NMPAnchorOverlayView, this can be done in Custom Class section in identity inspector panel. 
 3. Add the following constraints to your custom view: Height, trailing, leading, and either top or bottom constraint depending
@@ -58,19 +58,19 @@ whether your custom view should be anchored to top or bottom.
 4. Connect all four constraints @IBOutlets to your parent ViewController in code. 
 (Refer to Example project).
 
-1)   @IBOutlet weak var heightCt: NSLayoutConstraint!
-2)   @IBOutlet weak var leftCt: NSLayoutConstraint!
-3)   @IBOutlet weak var rightCt: NSLayoutConstraint!
+      1.   @IBOutlet weak var heightCt: NSLayoutConstraint!
+      2.   @IBOutlet weak var leftCt: NSLayoutConstraint!
+      3.   @IBOutlet weak var rightCt: NSLayoutConstraint!
 
-4) @IBOutlet weak var bottomCt: NSLayoutConstraint! or @IBOutlet weak var topCt: NSLayoutConstraint! 
+      4. @IBOutlet weak var bottomCt: NSLayoutConstraint! or @IBOutlet weak var topCt: NSLayoutConstraint! 
 
 ## Delegate methods
 To get notified of view’s state you can implement following optional four methods.
 
-func AnchorOverlayViewDidExpand(view: UIView)
-func AnchorOverlayViewDidShrink(view: UIView)
-func AnchorOverlayViewWillExpand(view: UIView)
-func AnchorOverlayViewWillShrink(view: UIView)
+- func AnchorOverlayViewDidExpand(view: UIView)
+- func AnchorOverlayViewDidShrink(view: UIView)
+- func AnchorOverlayViewWillExpand(view: UIView)
+- func AnchorOverlayViewWillShrink(view: UIView)
 
 ## Animation Parameters
 The animation of view’s expand and shrink can be modified with the following parameters, refer to NMPAnchorOverlayView.swift 
@@ -82,5 +82,5 @@ and the developer api reference for more details https://developer.apple.com/ref
 - animInitialSpringVelocity: CGFloat = 20.0
 - animClearance: CGFloat = 0.7
 
-##Author 
+## Author 
 Narumol Pugkhem
