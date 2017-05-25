@@ -125,8 +125,6 @@ class ViewController: UIViewController, NMPAnchorOverlayViewDelegate {
             self.button.isHidden = true
          }
       }
-      print("did shrink", stbView.viewState, slideView.viewState)
-
    }
    
    
@@ -141,7 +139,6 @@ class ViewController: UIViewController, NMPAnchorOverlayViewDelegate {
             }
          }
       }
-      print("will shrink", stbView.viewState, slideView.viewState)
    }
    
    
@@ -158,8 +155,6 @@ class ViewController: UIViewController, NMPAnchorOverlayViewDelegate {
             self.button.isHidden = false
          }
       }
-      print("did ex", stbView.viewState, slideView.viewState)
-
    }
    
    
@@ -173,8 +168,6 @@ class ViewController: UIViewController, NMPAnchorOverlayViewDelegate {
             }
          }
       }
-      print("will ex", stbView.viewState, slideView.viewState)
-
    }
    
 }
