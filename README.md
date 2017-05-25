@@ -37,7 +37,7 @@ To create NMPAnchorOverlayView programmatically from a parent viewController, us
 - size: the original size of an NMPAnchorOverlayView instance. The view will be created with the width from size.width and will appear with height of minHeight. 
 - minHeight: the size of view in shrink state
 - maxHeight: the size of view in expand state
-- anchorLocation: indicates whether the view will anchor it’s top or bottom to it’s superview. .top is the default location
+- anchorLocation: indicates whether the view will anchor it’s top or bottom to it’s superview., .top is the default location
 - yMargin: the space between the view’s top edge to that of it’s superview for top anchor location and between view’s bottom edge to that of it’s superview for bottom anchor location. 
 
 ### Convenience init function:  
@@ -51,10 +51,9 @@ The API uses default parameters in init methods which allows more ways to initia
 
 ## Initialized in Storyboard
 
-1. Add a UIView object in parent viewController's view
+1. In your project storyboard add a UIView object in parent viewController's view
 2. Set custom class to NMPAnchorOverlayView, this can be done in Custom Class section in identity inspector panel. 
-3. Add the following constraints to your custom view: Height, trailing, leading, and either top or bottom constraint depending
-whether your custom view should be anchored to top or bottom. 
+3. Add the following constraints to your custom view: Height, Trailing Space, Leading Space, and either Top Space or Bottom Space constraint depending whether your custom view should be anchored to the top or bottom. 
 4. Connect all four constraints @IBOutlets to your parent ViewController in code. 
 (Refer to Example project).
 
@@ -67,20 +66,20 @@ whether your custom view should be anchored to top or bottom.
 ## Delegate methods
 To get notified of view’s state you can implement following optional four methods.
 
-- func AnchorOverlayViewDidExpand(view: UIView)
-- func AnchorOverlayViewDidShrink(view: UIView)
-- func AnchorOverlayViewWillExpand(view: UIView)
-- func AnchorOverlayViewWillShrink(view: UIView)
+- func NMPAnchorOverlayViewDidExpand(view: UIView)
+- func NMPAnchorOverlayViewDidShrink(view: UIView)
+- func NMPAnchorOverlayViewWillExpand(view: UIView)
+- func NMPAnchorOverlayViewWillShrink(view: UIView)
 
 ## Animation Parameters
 The animation of view’s expand and shrink can be modified with the following parameters, refer to NMPAnchorOverlayView.swift 
 and the developer api reference for more details https://developer.apple.com/reference/uikit/uiview/1622594-animatewithduration
    
-- animDuration: TimeInterval with default value of 0.4
-- animDelay: TimeInterval default value of 0.0
-- animSpringDampingRatio: CGFloat = 0.6
-- animInitialSpringVelocity: CGFloat = 20.0
-- animClearance: CGFloat = 0.7
+- animDuration: TimeInterval, default value of 0.4
+- animDelay: TimeInterval, default value of 0.0
+- animSpringDampingRatio: CGFloat, default value of 0.6
+- animInitialSpringVelocity: CGFloat, default value of 20.0
+- animClearance: CGFloat, default value of 0.7
 
 ## Author 
 Narumol Pugkhem
