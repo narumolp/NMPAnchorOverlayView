@@ -24,10 +24,10 @@
 
 /*
  NMPAnchorOverlayView mimics the functionality of the Control Center from iPhone. 
- It basically a UIView that lets you slide to open which reveals extra utilities 
- buttons, labels, textfields, imageViews etc. and to close to regain your app real-estate.
+ It is basically a UIView that lets you slide to expand which reveals extra utilities
+ buttons, labels, textfields, imageViews etc. and to shrink to regain your App real-estate.
  The API allows the view to  anchor itself at it’s top or bottom edge of it’s 
- parent viewController’s view to suit your overall App design. This API support 
+ parent viewController’s view to suit your overall App design. This API supports
  both initialization from code or conveniently layout in storyboard.
 
  */
