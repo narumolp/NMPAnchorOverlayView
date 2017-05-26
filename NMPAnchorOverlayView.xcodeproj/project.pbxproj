@@ -41,7 +41,7 @@
 			isa = PBXGroup;
 			children = (
 				5D4653CF1ED7E2550047EB23 /* NMPAnchorOverlayView.swift */,
-				5DAB38BE1ED63CB800C836AA /* NMPAnchorOverlayView */,
+				5DAB38BE1ED63CB800C836AA /* NMPAnchorOverlayViewDemo */,
 				5DAB38BD1ED63CB800C836AA /* Products */,
 			);
 			sourceTree = "<group>";
@@ -54,7 +54,7 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		5DAB38BE1ED63CB800C836AA /* NMPAnchorOverlayView */ = {
+		5DAB38BE1ED63CB800C836AA /* NMPAnchorOverlayViewDemo */ = {
 			isa = PBXGroup;
 			children = (
 				5DAB38BF1ED63CB800C836AA /* AppDelegate.swift */,
@@ -64,6 +64,7 @@
 				5DAB38C81ED63CB800C836AA /* LaunchScreen.storyboard */,
 				5DAB38CB1ED63CB800C836AA /* Info.plist */,
 			);
+			name = NMPAnchorOverlayViewDemo;
 			path = NMPAnchorOverlayView;
 			sourceTree = "<group>";
 		};
