@@ -7,21 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5D4653CE1ED7CD670047EB23 /* NMPAnchorOverlayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D4653CD1ED7CD670047EB23 /* NMPAnchorOverlayView.swift */; };
 		5DAB38C01ED63CB800C836AA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DAB38BF1ED63CB800C836AA /* AppDelegate.swift */; };
 		5DAB38C21ED63CB800C836AA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DAB38C11ED63CB800C836AA /* ViewController.swift */; };
 		5DAB38CA1ED63CB800C836AA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5DAB38C81ED63CB800C836AA /* LaunchScreen.storyboard */; };
-		5DAB38D21ED63CE400C836AA /* NMPAnchorOverlayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DAB38D11ED63CE400C836AA /* NMPAnchorOverlayView.swift */; };
 		5DAB38D61ED63D3B00C836AA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5DAB38D51ED63D3B00C836AA /* Assets.xcassets */; };
 		5DAB38D81ED64F2E00C836AA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5DAB38D71ED64F2E00C836AA /* Main.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		5DAB38BC1ED63CB800C836AA /* NMPAnchorOverlayViewExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NMPAnchorOverlayViewExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		5D4653CD1ED7CD670047EB23 /* NMPAnchorOverlayView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NMPAnchorOverlayView.swift; sourceTree = "<group>"; };
+		5DAB38BC1ED63CB800C836AA /* NMPAnchorOverlayView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NMPAnchorOverlayView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5DAB38BF1ED63CB800C836AA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5DAB38C11ED63CB800C836AA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		5DAB38C91ED63CB800C836AA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5DAB38CB1ED63CB800C836AA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		5DAB38D11ED63CE400C836AA /* NMPAnchorOverlayView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NMPAnchorOverlayView.swift; sourceTree = "<group>"; };
 		5DAB38D51ED63D3B00C836AA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5DAB38D71ED64F2E00C836AA /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -40,7 +40,7 @@
 		5DAB38B31ED63CB800C836AA = {
 			isa = PBXGroup;
 			children = (
-				5DAB38BE1ED63CB800C836AA /* NMPAnchorOverlayViewExample */,
+				5DAB38BE1ED63CB800C836AA /* NMPAnchorOverlayView */,
 				5DAB38BD1ED63CB800C836AA /* Products */,
 			);
 			sourceTree = "<group>";
@@ -48,31 +48,31 @@
 		5DAB38BD1ED63CB800C836AA /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				5DAB38BC1ED63CB800C836AA /* NMPAnchorOverlayViewExample.app */,
+				5DAB38BC1ED63CB800C836AA /* NMPAnchorOverlayView.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		5DAB38BE1ED63CB800C836AA /* NMPAnchorOverlayViewExample */ = {
+		5DAB38BE1ED63CB800C836AA /* NMPAnchorOverlayView */ = {
 			isa = PBXGroup;
 			children = (
+				5D4653CD1ED7CD670047EB23 /* NMPAnchorOverlayView.swift */,
 				5DAB38BF1ED63CB800C836AA /* AppDelegate.swift */,
 				5DAB38C11ED63CB800C836AA /* ViewController.swift */,
-				5DAB38D11ED63CE400C836AA /* NMPAnchorOverlayView.swift */,
 				5DAB38D71ED64F2E00C836AA /* Main.storyboard */,
 				5DAB38D51ED63D3B00C836AA /* Assets.xcassets */,
 				5DAB38C81ED63CB800C836AA /* LaunchScreen.storyboard */,
 				5DAB38CB1ED63CB800C836AA /* Info.plist */,
 			);
-			path = NMPAnchorOverlayViewExample;
+			path = NMPAnchorOverlayView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		5DAB38BB1ED63CB800C836AA /* NMPAnchorOverlayViewExample */ = {
+		5DAB38BB1ED63CB800C836AA /* NMPAnchorOverlayView */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 5DAB38CE1ED63CB800C836AA /* Build configuration list for PBXNativeTarget "NMPAnchorOverlayViewExample" */;
+			buildConfigurationList = 5DAB38CE1ED63CB800C836AA /* Build configuration list for PBXNativeTarget "NMPAnchorOverlayView" */;
 			buildPhases = (
 				5DAB38B81ED63CB800C836AA /* Sources */,
 				5DAB38B91ED63CB800C836AA /* Frameworks */,
@@ -82,9 +82,9 @@
 			);
 			dependencies = (
 			);
-			name = NMPAnchorOverlayViewExample;
+			name = NMPAnchorOverlayView;
 			productName = NMPAnchorOverlayViewExample;
-			productReference = 5DAB38BC1ED63CB800C836AA /* NMPAnchorOverlayViewExample.app */;
+			productReference = 5DAB38BC1ED63CB800C836AA /* NMPAnchorOverlayView.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -104,7 +104,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 5DAB38B71ED63CB800C836AA /* Build configuration list for PBXProject "NMPAnchorOverlayViewExample" */;
+			buildConfigurationList = 5DAB38B71ED63CB800C836AA /* Build configuration list for PBXProject "NMPAnchorOverlayView" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -117,7 +117,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				5DAB38BB1ED63CB800C836AA /* NMPAnchorOverlayViewExample */,
+				5DAB38BB1ED63CB800C836AA /* NMPAnchorOverlayView */,
 			);
 		};
 /* End PBXProject section */
@@ -140,9 +140,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5D4653CE1ED7CD670047EB23 /* NMPAnchorOverlayView.swift in Sources */,
 				5DAB38C21ED63CB800C836AA /* ViewController.swift in Sources */,
 				5DAB38C01ED63CB800C836AA /* AppDelegate.swift in Sources */,
-				5DAB38D21ED63CE400C836AA /* NMPAnchorOverlayView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -258,9 +258,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 4VLE7V98LZ;
-				INFOPLIST_FILE = NMPAnchorOverlayViewExample/Info.plist;
+				INFOPLIST_FILE = NMPAnchorOverlayView/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.NarumolPugkhem.NMPAnchorOverlayViewExample;
+				PRODUCT_BUNDLE_IDENTIFIER = com.NarumolPugkhem.NMPAnchorOverlayView;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -271,9 +271,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 4VLE7V98LZ;
-				INFOPLIST_FILE = NMPAnchorOverlayViewExample/Info.plist;
+				INFOPLIST_FILE = NMPAnchorOverlayView/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.NarumolPugkhem.NMPAnchorOverlayViewExample;
+				PRODUCT_BUNDLE_IDENTIFIER = com.NarumolPugkhem.NMPAnchorOverlayView;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -282,7 +282,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		5DAB38B71ED63CB800C836AA /* Build configuration list for PBXProject "NMPAnchorOverlayViewExample" */ = {
+		5DAB38B71ED63CB800C836AA /* Build configuration list for PBXProject "NMPAnchorOverlayView" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				5DAB38CC1ED63CB800C836AA /* Debug */,
@@ -291,13 +291,14 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		5DAB38CE1ED63CB800C836AA /* Build configuration list for PBXNativeTarget "NMPAnchorOverlayViewExample" */ = {
+		5DAB38CE1ED63CB800C836AA /* Build configuration list for PBXNativeTarget "NMPAnchorOverlayView" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				5DAB38CF1ED63CB800C836AA /* Debug */,
 				5DAB38D01ED63CB800C836AA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
