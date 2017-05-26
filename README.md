@@ -65,10 +65,10 @@ Using Default Parameter in init methods, a NMPAnchorOverlayView instance can be 
 ## Delegate methods
 To get notified of view’s state you can implement following optional four methods.
 
-func AnchorOverlayViewDidExpand(view: UIView)
-func AnchorOverlayViewDidShrink(view: UIView)
-func AnchorOverlayViewWillExpand(view: UIView)
-func AnchorOverlayViewWillShrink(view: UIView)
+##### func AnchorOverlayViewDidExpand(view: UIView)
+##### func AnchorOverlayViewDidShrink(view: UIView)
+##### func AnchorOverlayViewWillExpand(view: UIView)
+##### func AnchorOverlayViewWillShrink(view: UIView)
 
 ## Animation Parameters
 The animation of view’s expand and shrink can be modified with the following parameters, refer to NMPAnchorOverlayView.swift 
