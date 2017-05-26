@@ -46,22 +46,21 @@ convenience init(size: CGSize, anchorLocation: AnchorLocation = .top, yMargin: C
 
 Using Default Parameter in init methods, a NMPAnchorOverlayView instance can be initiated by one or more parameters as follows
 
-let defaultTopAnchoredView = NMPAnchorOverlayView(size: size)
-let bottomAnchoredView = NMPAnchorOverlayView(size: size, anchorLocation: .bottom)
-let veryLargeTopAnchoredView  = NMPAnchorOverlayView(size: size, maximumHeight: 700)
+- let defaultTopAnchoredView = NMPAnchorOverlayView(size: size)
+- let bottomAnchoredView = NMPAnchorOverlayView(size: size, anchorLocation: .bottom)
+- let veryLargeTopAnchoredView  = NMPAnchorOverlayView(size: size, maximumHeight: 700)
 
 ## Initialized in Storyboard
-1. Add a UIView object in parent viewController's view
-2. Set custom class to NMPAnchorOverlayView, this can be done in the Custom Class section in identity inspector panel. 
-3. Add the following constraints to your custom view: Height, trailing, leading, and either top or bottom constraint depending on whether your custom view should be anchored to top or bottom. 
-4. Connect all four constraints @IBOutlets to your parent ViewController in code. 
+1) Add a UIView object in parent viewController's view
+2) Set custom class to NMPAnchorOverlayView, this can be done in the Custom Class section in identity inspector panel. 
+3) Add the following constraints to your custom view: Height, Trailing Space, Leading Space, and either Top Space or Bottom Space constraint depending on whether your custom view should be anchored to top or bottom. 
+4) Connect all four constraints @IBOutlets to your parent ViewController in code. 
 (Refer to Example project).
 
-1)   @IBOutlet weak var heightCt: NSLayoutConstraint!
-2)   @IBOutlet weak var leftCt: NSLayoutConstraint!
-3)   @IBOutlet weak var rightCt: NSLayoutConstraint!
-
-4) @IBOutlet weak var bottomCt: NSLayoutConstraint! or @IBOutlet weak var topCt: NSLayoutConstraint! 
+- 1   @IBOutlet weak var heightCt: NSLayoutConstraint!
+- 2   @IBOutlet weak var leftCt: NSLayoutConstraint!
+- 3   @IBOutlet weak var rightCt: NSLayoutConstraint!
+- 4   @IBOutlet weak var bottomCt: NSLayoutConstraint! or @IBOutlet weak var topCt: NSLayoutConstraint! 
 
 ## Delegate methods
 To get notified of view’s state you can implement following optional four methods.
