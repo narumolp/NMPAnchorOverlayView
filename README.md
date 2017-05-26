@@ -57,8 +57,9 @@ Using Default Parameter in init methods, a NMPAnchorOverlayView instance can be 
 1) Add a UIView object in parent viewController's view
 2) Set custom class to NMPAnchorOverlayView, this can be done in the Custom Class section in identity inspector panel. 
 3) Add four constraints to your custom view: Height, Trailing Space, Leading Space, and either Top Space or Bottom Space constraint depending on whether your custom view should be anchored to top or bottom. 
-4) Connect all four constraints @IBOutlets to your parent ViewController in code. (see to demo project).
+4) Connect all four constraints @IBOutlets to your parent ViewController in code.
 
+#### Connect IBOutlets
       @IBOutlet weak var heightCt: NSLayoutConstraint!
       @IBOutlet weak var leftCt: NSLayoutConstraint!
       @IBOutlet weak var rightCt: NSLayoutConstraint!
