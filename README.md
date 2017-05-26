@@ -1,8 +1,8 @@
 # NMPAnchorOverlayView
 
-NMPAnchorOverlayView mimics the functionality of the Control Center from iPhone. It is a UIView that lets you slide to expand which reveals extra utilities buttons, labels, textfields, imageViews etc. and to shrink which regains your app real estate. The API allows the view to  anchor itself at it’s top or bottom edge of it’s parent viewController’s view to suit your overall App design. This API support both initialization from code or storyboard.
+NMPAnchorOverlayView mimics the functionality of the Control Center from the iPhone. It is a UIView based component that lets the user slide to expand (revealing any components you may have placed in it such as buttons, labels, textfields, imageViews etc.) and to slide it back in its entirety or partially thereby regaining screen real estate. The component implements sliding with an animated bounch effect. The API allows the view to anchor itself at it’s top or bottom edge of it’s parent viewController’s view to suit your overall App design. This API support both initialization from code or storyboard.
 
-Just like regular UIView, you can change appearance to suit your need, this includes backgroundColor, cornerRadius, border width, alpha, tintColor, contentMode just to name a few.
+Just like a regular UIView, you can change NMPAnchorOverlayView's' appearance to suit your needs. This includes backgroundColor, cornerRadius, border width, alpha, tintColor, contentMode just to name a few.
 
 # Features
 - Swift 3.0
@@ -52,9 +52,8 @@ let veryLargeTopAnchoredView  = NMPAnchorOverlayView(size: size, maximumHeight: 
 
 ## Initialized in Storyboard
 1. Add a UIView object in parent viewController's view
-2. Set custom class to NMPAnchorOverlayView, this can be done in Custom Class section in identity inspector panel. 
-3. Add the following constraints to your custom view: Height, trailing, leading, and either top or bottom constraint depending
-whether your custom view should be anchored to top or bottom. 
+2. Set custom class to NMPAnchorOverlayView, this can be done in the Custom Class section in identity inspector panel. 
+3. Add the following constraints to your custom view: Height, trailing, leading, and either top or bottom constraint depending on whether your custom view should be anchored to top or bottom. 
 4. Connect all four constraints @IBOutlets to your parent ViewController in code. 
 (Refer to Example project).
 
