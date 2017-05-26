@@ -18,10 +18,10 @@
 /* Begin PBXFileReference section */
 		5D4653CF1ED7E2550047EB23 /* NMPAnchorOverlayView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NMPAnchorOverlayView.swift; sourceTree = SOURCE_ROOT; };
 		5DAB38BC1ED63CB800C836AA /* NMPAnchorOverlayView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NMPAnchorOverlayView.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		5DAB38BF1ED63CB800C836AA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = NMPAnchorOverlayView/AppDelegate.swift; sourceTree = SOURCE_ROOT; };
-		5DAB38C11ED63CB800C836AA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		5DAB38BF1ED63CB800C836AA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = NMPAnchorOverlayView_Demo/AppDelegate.swift; sourceTree = SOURCE_ROOT; };
+		5DAB38C11ED63CB800C836AA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ViewController.swift; path = "/Users/Narumol/Documents/~xcodeprojects/NMPAnchorOverlayView/NMPAnchorOverlayView_Demo/ViewController.swift"; sourceTree = "<absolute>"; };
 		5DAB38C91ED63CB800C836AA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		5DAB38CB1ED63CB800C836AA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5DAB38CB1ED63CB800C836AA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = "/Users/Narumol/Documents/~xcodeprojects/NMPAnchorOverlayView/NMPAnchorOverlayView_Demo/Info.plist"; sourceTree = "<absolute>"; };
 		5DAB38D51ED63D3B00C836AA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5DAB38D71ED64F2E00C836AA /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -65,8 +65,8 @@
 				5DAB38CB1ED63CB800C836AA /* Info.plist */,
 			);
 			name = NMPAnchorOverlayViewDemo;
-			path = NMPAnchorOverlayView;
-			sourceTree = "<group>";
+			path = "/Users/Narumol/Documents/~xcodeprojects/NMPAnchorOverlayView/NMPAnchorOverlayView_Demo";
+			sourceTree = "<absolute>";
 		};
 /* End PBXGroup section */
 
@@ -259,9 +259,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 4VLE7V98LZ;
-				INFOPLIST_FILE = NMPAnchorOverlayView/Info.plist;
+				INFOPLIST_FILE = NMPAnchorOverlayView_Demo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.NarumolPugkhem.NMPAnchorOverlayView;
+				PRODUCT_BUNDLE_IDENTIFIER = com.NarumolPugkhem.NMPAnchorOverlayView_Demo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -272,9 +272,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 4VLE7V98LZ;
-				INFOPLIST_FILE = NMPAnchorOverlayView/Info.plist;
+				INFOPLIST_FILE = NMPAnchorOverlayView_Demo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.NarumolPugkhem.NMPAnchorOverlayView;
+				PRODUCT_BUNDLE_IDENTIFIER = com.NarumolPugkhem.NMPAnchorOverlayView_Demo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
