@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		5D4653CE1ED7CD670047EB23 /* NMPAnchorOverlayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D4653CD1ED7CD670047EB23 /* NMPAnchorOverlayView.swift */; };
+		5D4653D01ED7E2550047EB23 /* NMPAnchorOverlayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D4653CF1ED7E2550047EB23 /* NMPAnchorOverlayView.swift */; };
 		5DAB38C01ED63CB800C836AA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DAB38BF1ED63CB800C836AA /* AppDelegate.swift */; };
 		5DAB38C21ED63CB800C836AA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DAB38C11ED63CB800C836AA /* ViewController.swift */; };
 		5DAB38CA1ED63CB800C836AA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5DAB38C81ED63CB800C836AA /* LaunchScreen.storyboard */; };
@@ -16,9 +16,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		5D4653CD1ED7CD670047EB23 /* NMPAnchorOverlayView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NMPAnchorOverlayView.swift; path = NMPAnchorOverlayView/NMPAnchorOverlayView.swift; sourceTree = "<group>"; };
+		5D4653CF1ED7E2550047EB23 /* NMPAnchorOverlayView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NMPAnchorOverlayView.swift; sourceTree = SOURCE_ROOT; };
 		5DAB38BC1ED63CB800C836AA /* NMPAnchorOverlayView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NMPAnchorOverlayView.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		5DAB38BF1ED63CB800C836AA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		5DAB38BF1ED63CB800C836AA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = NMPAnchorOverlayView/AppDelegate.swift; sourceTree = SOURCE_ROOT; };
 		5DAB38C11ED63CB800C836AA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		5DAB38C91ED63CB800C836AA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5DAB38CB1ED63CB800C836AA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -40,7 +40,7 @@
 		5DAB38B31ED63CB800C836AA = {
 			isa = PBXGroup;
 			children = (
-				5D4653CD1ED7CD670047EB23 /* NMPAnchorOverlayView.swift */,
+				5D4653CF1ED7E2550047EB23 /* NMPAnchorOverlayView.swift */,
 				5DAB38BE1ED63CB800C836AA /* NMPAnchorOverlayView */,
 				5DAB38BD1ED63CB800C836AA /* Products */,
 			);
@@ -140,7 +140,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5D4653CE1ED7CD670047EB23 /* NMPAnchorOverlayView.swift in Sources */,
+				5D4653D01ED7E2550047EB23 /* NMPAnchorOverlayView.swift in Sources */,
 				5DAB38C21ED63CB800C836AA /* ViewController.swift in Sources */,
 				5DAB38C01ED63CB800C836AA /* AppDelegate.swift in Sources */,
 			);
