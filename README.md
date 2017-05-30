@@ -1,5 +1,8 @@
 # NMPAnchorOverlayView
 
+![img](https://github.com/narumolp/NMPAnchorOverlayView/blob/master/Gif/demo.gif)
+
+
 NMPAnchorOverlayView mimics the functionality of the Control Center from the iPhone. It is a UIView based component that lets the user slide to expand (revealing any components you may have placed in it such as buttons, labels, textfields, imageViews etc.) and to slide it back in its entirety or partially thereby regaining screen real estate. The component implements sliding with an animated bounch effect. The API allows the view to anchor itself at it’s top or bottom edge of it’s parent viewController’s view to suit your overall App design. This API support both initialization from code or storyboard.
 
 Just like a regular UIView, you can change NMPAnchorOverlayView's' appearance to suit your needs. This includes backgroundColor, cornerRadius, border width, alpha, tintColor, contentMode just to name a few.
@@ -83,6 +86,3 @@ and the developer api reference for more details https://developer.apple.com/ref
 - animInitialSpringVelocity: CGFloat default value of 20.0
 - animClearance: CGFloat default value of 0.7
 
-## Demo
-
-![img](https://github.com/narumolp/NMPAnchorOverlayView/blob/master/Gif/demo.gif)
