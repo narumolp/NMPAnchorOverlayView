@@ -16,5 +16,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
   func applicationDidBecomeActive(_ application: UIApplication) {
     print("applicationDid Become Active added in feature/Test1")
   }
+  
+  func applicationWillResignActive(_ application: UIApplication) {
+    print("applicationWillResignActive added in feature/test3")
+  }
 }
 
