@@ -13,5 +13,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
       return true
    }
 
+  func applicationDidBecomeActive(_ application: UIApplication) {
+    print("applicationDid Become Active added in feature/Test1")
+  }
 }
 
