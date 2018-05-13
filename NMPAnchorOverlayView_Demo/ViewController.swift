@@ -85,6 +85,10 @@ class ViewController: UIViewController, NMPAnchorOverlayViewDelegate {
     super.viewWillAppear(animated)
   }
   
+  override func viewDidAppear(_ animated: Bool) {
+    super.viewDidAppear(animated)
+  }
+
    /// Add a purple view on NMPAnchorOverlayView's instance
    /// - Returns:
    func addStuffOnSlideView() {
