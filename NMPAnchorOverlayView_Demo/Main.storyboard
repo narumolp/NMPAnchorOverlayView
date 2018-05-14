@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="NMPAnchorOverlayViewExample" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="r1W-wF-Y74" customClass="NMPAnchorOverlayView" customModule="NMPAnchorOverlayViewExample" customModuleProvider="target">
+                                <rect key="frame" x="20" y="447" width="335" height="200"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="14" translatesAutoresizingMaskIntoConstraints="NO" id="mzF-yC-9YT">
+                                        <rect key="frame" x="10" y="25" width="315" height="150"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="250" distribution="fillEqually" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="b0A-W1-4ei">
+                                                <rect key="frame" x="0.0" y="0.0" width="315" height="68"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IjD-2y-DGF" userLabel="b2">
+                                                        <rect key="frame" x="0.0" y="0.0" width="103" height="68"/>
+                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                        <state key="normal" image="playful"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                                <integer key="value" value="8"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="b2Pressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="KIr-Ak-kNb"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mjB-Jr-nd6" userLabel="b3">
+                                                        <rect key="frame" x="106" y="0.0" width="103" height="68"/>
+                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                        <state key="normal" image="bark"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                                <integer key="value" value="8"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="b3Pressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dRS-gv-5bm"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JXc-Hw-Qgd" userLabel="b4">
+                                                        <rect key="frame" x="212" y="0.0" width="103" height="68"/>
+                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                        <state key="normal" image="sweet"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                                <integer key="value" value="8"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="b4Pressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="vET-Fa-dQ7"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                                <color key="backgroundColor" red="0.93725490570000003" green="0.93725490570000003" blue="0.95686274770000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="fUn-ls-BF6">
+                                                <rect key="frame" x="0.0" y="82" width="315" height="68"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gHJ-Yr-jW6">
+                                                        <rect key="frame" x="0.0" y="0.0" width="315" height="68"/>
+                                                        <color key="backgroundColor" red="0.7019608021" green="0.7019608021" blue="0.7019608021" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                                        <state key="normal" title="Big Button">
+                                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                        </state>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                                <integer key="value" value="8"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="fUn-ls-BF6" firstAttribute="height" secondItem="b0A-W1-4ei" secondAttribute="height" id="y1Q-nq-shg"/>
+                                        </constraints>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="mzF-yC-9YT" firstAttribute="leading" secondItem="r1W-wF-Y74" secondAttribute="leading" constant="10" id="7EP-g8-hDv"/>
+                                    <constraint firstAttribute="trailing" secondItem="mzF-yC-9YT" secondAttribute="trailing" constant="10" id="ECD-Jj-tcN"/>
+                                    <constraint firstItem="mzF-yC-9YT" firstAttribute="top" relation="greaterThanOrEqual" secondItem="r1W-wF-Y74" secondAttribute="top" constant="25" id="d7U-ig-EWH"/>
+                                    <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="mzF-yC-9YT" secondAttribute="bottom" priority="999" constant="25" id="pjP-UQ-Pvj"/>
+                                    <constraint firstAttribute="height" constant="200" identifier="ht" id="xAg-qi-4R2"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <integer key="value" value="8"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="r1W-wF-Y74" secondAttribute="bottom" constant="20" id="4im-lI-4wp"/>
+                            <constraint firstAttribute="trailing" secondItem="r1W-wF-Y74" secondAttribute="trailing" constant="20" id="Elh-9w-x4g"/>
+                            <constraint firstItem="r1W-wF-Y74" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="qgF-7u-uI4"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="B4" destination="JXc-Hw-Qgd" id="xaf-ck-bbY"/>
+                        <outlet property="bottomCt" destination="4im-lI-4wp" id="sPN-Ve-abX"/>
+                        <outlet property="heightCt" destination="xAg-qi-4R2" id="iZM-m2-OTV"/>
+                        <outlet property="leftCt" destination="qgF-7u-uI4" id="q07-Zn-aVO"/>
+                        <outlet property="rightCt" destination="Elh-9w-x4g" id="hdF-Lk-Qxn"/>
+                        <outlet property="stbView" destination="r1W-wF-Y74" id="yfA-Oy-twk"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-278" y="134"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="bark" width="612" height="792"/>
+        <image name="playful" width="612" height="792"/>
+        <image name="sweet" width="612" height="792"/>
+    </resources>
+</document>
